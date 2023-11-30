@@ -23,6 +23,16 @@ class ofApp : public ofBaseApp{
 		void audioOut(ofSoundBuffer& buffer);
 
 		ofSoundStream soundStream;
+		ofSoundPlayer player;
+
+		ofLight light;
+		ofEasyCam cam;
+
+		ofBoxPrimitive box;
+		ofMaterial boxMaterial;
+
+		const static int barAmount = 50;
+		ofBoxPrimitive bars[barAmount];
 
 		float 	pan;
 		int		sampleRate;
@@ -32,6 +42,7 @@ class ofApp : public ofBaseApp{
 		vector <float> lAudio;
 		vector <float> rAudio;
 
+		float scaleModify = 500;
 		//------------------- for the simple sine wave synthesis
 		float 	targetFrequency;
 		float 	phase;

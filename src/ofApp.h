@@ -20,7 +20,6 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		void audioOut(ofSoundBuffer& buffer);
 
 		ofSoundStream soundStream;
 		ofSoundPlayer player;
@@ -42,7 +41,7 @@ class ofApp : public ofBaseApp{
 		vector <float> lAudio;
 		vector <float> rAudio;
 
-		float scaleModify = 500;
+		float scaleModify = 250;
 		//------------------- for the simple sine wave synthesis
 		float 	targetFrequency;
 		float 	phase;

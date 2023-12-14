@@ -55,10 +55,7 @@ void ofApp::setup(){
 void ofApp::update(){
 	float* spectrum = ofSoundGetSpectrum(512);
 
-	//cout << *spectrum << endl;
-
 	light.setAmbientColor(light.getAmbientColor() * *spectrum);
-	//light.setDiffuseColor(light.getDiffuseColor() * *spectrum);
 }
 
 //--------------------------------------------------------------
@@ -78,14 +75,6 @@ void ofApp::draw(){
 
 		bars[i].draw();
 	}
-
-	//float* spectrum = ofSoundGetSpectrum(1);
-	//float spec = *spectrum;
-
-	//glm::vec3 scale = glm::vec3(1, 1 + spec * scaleModify, 1);
-	//box.setScale(scale);
-	//box.draw();
-
 
 	boxMaterial.end();
 
@@ -160,21 +149,4 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
-}
-
-void ofApp::audioOut(ofSoundBuffer& buffer) {
-	//cout << "Number of samples: " << buffer.size() << endl;
-	
-	//for (int i = 0; i < buffer.size(); i += 2) {
-	//	float sample = sin(phase); // generating a sine wave sample
-	//	buffer[i] = sample; // writing to the left channel
-	//	buffer[i + 1] = sample; // writing to the right channel
-	//	phase += 0.01;
-
-	//	cout << sample << endl;
-	//}
-
-
-	//for(int i = 0; i < buffer.size(); i += 2)
-	//	cout << buffer[i] << " : " << buffer[i + 1] << endl;	
 }
